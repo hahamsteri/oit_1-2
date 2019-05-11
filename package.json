@@ -1,0 +1,14 @@
+{
+  "name": "oit_1-2",
+  "version": "1.0.0",
+  "description": "Курсовой проект, ОИТ, 1 курс, 2 семестр",
+  "author": "Татьяна Сипайло",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hahamsteri/oit_1-2.git"
+  },
+  "homepage": "https://github.com/hahamsteri/oit_1-2#readme",
+  "license": "ISC",
+  "scripts": {
+  }
+}
