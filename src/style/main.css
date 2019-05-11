@@ -1,3 +1,29 @@
 body {
+    margin: 0;
+    padding: 0;
+
     background: #ddd;
+}
+
+.page-container {
+    display: flex;
+
+    flex-direction: row;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.side-menu {
+    flex-shrink: 0;
+    width: 200px;
+
+    background: green;
+}
+
+.content {
+    flex-grow: 1;
+
+    background: yellow;
 }
