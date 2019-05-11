@@ -10,5 +10,14 @@
   "homepage": "https://github.com/hahamsteri/oit_1-2#readme",
   "license": "ISC",
   "scripts": {
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-copy": "^4.0.1",
+    "gulp-hb": "^8.0.0"
   }
 }
