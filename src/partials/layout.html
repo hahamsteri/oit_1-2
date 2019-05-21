@@ -3,17 +3,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>{{title}}</title>
     <link rel="stylesheet" href="/style/main.css">
 </head>
 <body>
-    <div class="page-container">
-        <div class="side-menu">
+    <header>
+        <img src="http://placekitten.com/1200/60">
+    </header>
+    <div class="container">
+        <nav class="side">
             {{> menu}}
-        </div>
-        <div class="content">
+        </nav>
+        <article class="content">
             {{> @partial-block }}
-        </div>
+        </article>
     </div>
 </body>
 <script src="/script/main.js"></script>
