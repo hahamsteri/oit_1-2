@@ -12,14 +12,22 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && gulp build",
-    "start": "gulp start"
+    "start": "gulp start",
+    "publish": "npm run clean && gulp publish"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run publish"
+    }
   },
   "devDependencies": {
     "browser-sync": "2.26.5",
+    "gh-pages": "2.0.1",
     "gulp": "4.0.2",
     "gulp-cli": "2.2.0",
     "gulp-copy": "4.0.1",
     "gulp-hb": "8.0.0",
+    "husky": "2.3.0",
     "rimraf": "2.6.3"
   }
 }

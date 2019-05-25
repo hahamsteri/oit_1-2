@@ -2,6 +2,7 @@ const path = require('path');
 const gulp = require('gulp');
 const hb = require('gulp-hb');
 const copy = require('gulp-copy');
+const ghPages = require('gh-pages');
 const browserSync = require('browser-sync').create();
 
 const srcBase = path.resolve(__dirname, 'src');
@@ -68,6 +69,10 @@ function watchStatic(cb) {
     cb();
 }
 
+function publish(cb) {
+    ghPages.publish(distBase, cb);
+}
+
 gulp.task('start', gulp.series(
     runBrowserSync,
     reloadBrowserSync,
@@ -84,4 +89,9 @@ gulp.task('start', gulp.series(
 gulp.task('build', gulp.parallel(
     buildMarkup,
     copyStatic
+));
+
+gulp.task('publish', gulp.series(
+    gulp.task('build'),
+    publish,
 ));
