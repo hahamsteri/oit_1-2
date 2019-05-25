@@ -25,8 +25,11 @@ function runBrowserSync(cb) {
 
 function reloadBrowserSync(cb) {
     gulp.watch(
-        path.resolve(distBase),
-        browserSync.reload
+        path.resolve(distBase, '**/*'),
+        cb => {
+            browserSync.reload();
+            cb();
+        }
     );
 
     cb();
@@ -51,8 +54,7 @@ function watchMarkup(cb) {
 
 function copyStatic(cb) {
     gulp.src(staticSrc)
-        .pipe(copy(path.resolve(distBase), { prefix: 1 }))
-        // .pipe(gulp.dest(path.resolve(distBase)));
+        .pipe(copy(path.resolve(distBase), { prefix: 1 }));
 
     cb();
 }
