@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{title}}</title>
+    <title></title>
     <link rel="stylesheet" href="/style/main.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
@@ -13,10 +13,16 @@
     </header>
     <div class="container">
         <nav class="side">
-            {{> menu}}
-        </nav>
+            <ul class="menu">
+                <li >
+                    <a href="/long">Длинношерстные</a>
+                </li>
+                <li >
+                    <a href="/short">Короткошерстные</a>
+                </li>
+            </ul>        </nav>
         <article class="content">
-            {{> @partial-block }}
+            
         </article>
     </div>
 </body>
