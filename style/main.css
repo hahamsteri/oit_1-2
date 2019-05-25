@@ -2,6 +2,7 @@
     --color-base: #222;
     --color-mute: #666;
     --color-highlight: #366472;
+    --color-highlight-pale: #a3d1df;
     --base-size: 8px;
     --container-width: calc(var(--base-size) * 150); /* 1200px */
 }
@@ -54,36 +55,60 @@ a {
 .content {
     flex-grow: 1;
 
-    padding: 2em 4em;
+    padding: 2em 4rem;
 }
 
 .menu {
     list-style: none;
 
-    padding: 0.5em;
+    padding: 0.5rem;
 
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
 .menu > li {
-    padding-bottom: 1em;
+    padding-bottom: 1rem;
 }
 
 .menu a {
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
 .copyright {
     display: inline-block;
 
-    margin-bottom: .8em;
+    margin-bottom: .8rem;
 
-    font-size: .8em;
+    font-size: .8rem;
 }
 
 .footer-link {
-    margin-right: 1em;
+    margin-right: 1rem;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 2rem;
     word-spacing: 0;
+}
+
+.fact {
+    margin-bottom: 2rem;
+    padding: 1rem 1rem 1rem 2rem;
+
+    border: 2px solid var(--color-highlight);
+    border-radius: .2rem;
+
+    background-color: var(--color-highlight-pale);
+
+    color: var(--color-highlight);
+
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 1.1rem;
+}
+
+.fact::before {
+    display: block;
+    content: 'Интересный факт:';
+
+    padding-bottom: .8rem;
+
+    font-size: .8rem;
 }
