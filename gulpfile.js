@@ -53,11 +53,10 @@ function watchMarkup(cb) {
     cb();
 }
 
-function copyStatic(cb) {
-    gulp.src(staticSrc)
-        .pipe(copy(path.resolve(distBase), { prefix: 1 }));
-
-    cb();
+function copyStatic() {
+    return gulp.src(staticSrc)
+        .pipe(copy(path.resolve(distBase), { prefix: 1 }))
+        .pipe(gulp.dest(distBase));
 }
 
 function watchStatic(cb) {
