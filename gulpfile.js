@@ -33,7 +33,7 @@ function reloadBrowserSync(cb) {
 };
 
 function buildMarkup(cb) {
-    gulp.src(path.resolve(srcBase, '*.html'))
+    gulp.src([path.resolve(srcBase, '**/*.html'), `!${path.resolve(srcBase, 'partials/*.html')}`])
         .pipe(hb().partials(path.resolve(srcBase, 'partials/*.html')))
         .pipe(gulp.dest(distBase));
     
