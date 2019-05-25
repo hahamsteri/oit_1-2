@@ -54,7 +54,7 @@ a {
 .content {
     flex-grow: 1;
 
-    padding: calc(var(--base-size) * 2) calc(var(--base-size) * 4);
+    padding: 2em 4em;
 }
 
 .menu {
@@ -71,4 +71,19 @@ a {
 
 .menu a {
     font-size: 1.3em;
+}
+
+.copyright {
+    display: inline-block;
+
+    margin-bottom: .8em;
+
+    font-size: .8em;
+}
+
+.footer-link {
+    margin-right: 1em;
+    text-decoration: none;
+    font-size: 2em;
+    word-spacing: 0;
 }
