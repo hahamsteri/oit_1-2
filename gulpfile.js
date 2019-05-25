@@ -91,7 +91,4 @@ gulp.task('build', gulp.parallel(
     copyStatic
 ));
 
-gulp.task('publish', gulp.series(
-    gulp.task('build'),
-    publish,
-));
+gulp.task('publish', publish);

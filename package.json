@@ -12,8 +12,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && gulp build",
-    "start": "gulp start",
-    "publish": "npm run clean && gulp publish"
+    "start": "npm run clean && gulp start",
+    "publish": "npm run build && gulp publish"
   },
   "husky": {
     "hooks": {
