@@ -1,0 +1,72 @@
+:root {
+    --color-base: #222;
+    --color-mute: #666;
+    --color-highlight: #366472;
+    --base-size: 8px;
+    --container-width: calc(var(--base-size) * 150); /* 1200px */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: calc(var(--base-font-size) * 2); /* 16px */
+    
+    color: var(--color-base);
+}
+
+header {
+    width: var(--container-width);
+
+    margin: 0 auto;
+}
+
+a {
+    color: var(--color-highlight);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+.side {
+    display: flex;
+
+    flex-direction: column;
+    flex-shrink: 0;
+
+    justify-content: space-between;
+
+    width: calc(var(--base-size) * 30);
+
+    padding: calc(var(--base-size) * 2);
+    
+    border-right: 1px solid var(--color-mute);
+}
+
+.content {
+    flex-grow: 1;
+
+    padding: calc(var(--base-size) * 2) calc(var(--base-size) * 4);
+}
+
+.menu {
+    list-style: none;
+
+    padding: 0.5em;
+}
+
+.menu > li {
+    padding-bottom: 1em;
+}
+
+.menu a {
+    font-size: 1.3em;
+}
