@@ -1,8 +1,50 @@
 import { getRandomFact } from './fact.js';
-import { calcAge } from './age-calc.js';
+import { calcAge, monthToYears } from './age-calc.js';
 
 const $randomFactContainers = document.getElementsByClassName('fact');
 
 [...$randomFactContainers].forEach($el => {
     $el.innerText = getRandomFact();
 });
+
+const $calcAgeInput = document.getElementsByClassName('calcAgeInput');
+const $calcYears = document.getElementById('calcYears');
+const $calcMonths = document.getElementById('calcMonths');
+const $calcButton = document.getElementById('calculate');
+const $calcResult = document.getElementById('calcResult');
+
+[...$calcAgeInput].forEach($el => {
+    $el.addEventListener('keypress', preventNonNumbers);
+});
+
+if ($calcButton) {
+    $calcButton.addEventListener('click', updateAge);
+}
+
+function updateAge() {
+    const years = Number($calcYears && $calcYears.value || 0);
+    const months = Number($calcMonths && $calcMonths.value || 0);
+
+    if (!$calcResult) {
+        return;
+    }
+
+    if (!years && !months) {
+        $calcResult.innerText = null;
+
+        return;
+    }
+
+    const catsAge = calcAge(years, months);
+    const [catYears, catMonths] = monthToYears(catsAge);
+
+    $calcResult.innerText = `Вашему коту ${catYears} лет ${catMonths} месяцев`;
+}
+
+function preventNonNumbers(e) {
+    if (!parseInt(e.key)) {
+        e.preventDefault();
+
+        return;
+    }
+}

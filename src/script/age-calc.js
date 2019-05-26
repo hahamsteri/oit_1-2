@@ -28,3 +28,10 @@ export function calcAge(years = 0, months = 0) {
         return catsAge + phaseCatsAge;
     }, 0);
 }
+
+export function monthToYears(months) {
+    return [
+        Math.floor(months / 12),
+        months % 12,
+    ];
+}
