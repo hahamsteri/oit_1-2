@@ -152,6 +152,10 @@ a {
     z-index: -1;
 }
 
+.link.link--contain > img {
+    object-fit: contain;
+}
+
 .link > span {
     display: inline-block;
 
