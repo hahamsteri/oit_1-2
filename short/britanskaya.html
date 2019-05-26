@@ -30,13 +30,19 @@
                         <a href="/short">Короткошерстные</a>
                     </li>
                     <li>
-                            <a href="/okr.html">Окрасы</a>
+                        <a href="/okr.html">Окрасы</a>
                     </li>
                     <li>
-                            <a href="/reg.html">Фелинологические организации</a>
+                        <a href="/reg.html">Фелинологические организации</a>
                     </li>
-                
                 </ul>
+
+                <div class="actions">
+                    <button class="show-calc modal-open">
+                        Узнать возраст кота
+                    </button>
+                </div>
+
                 <div class="fact"></div>
             </div>
             <footer>
@@ -90,6 +96,36 @@
             <p>Представители породы склонны к ожирению, особенно стерилизованные и кастрированные животные, которые едят много, а ведут малоподвижный образ жизни. Поэтому для профилактики ожирения с кошками нужно играть, заинтересовывать игрушками, вовлекая в самостоятельную игру, и составить сбалансированный рацион.</p>
             
         </article>
+    </div>
+    <div class="modal" id="modal">
+        <div class="calc" id="calc">
+            <header>
+                <button id="calcClose" class="modal-close">
+                    Закрыть
+                </button>
+            </header>
+            <div class="form">
+                <div class="calc-input">
+                    <label for="sex">Пол</label>
+                    <select id="sex">
+                        <option value="m">Мужской</option>
+                        <option value="f">Женский</option>
+                    </select>
+                </div>
+                <div class="calc-input">
+                    <label for="calcYears">Лет</label>
+                    <input type="text" class="calcAgeInput" id="calcYears">
+                </div>
+                <div class="calc-input">
+                    <label for="calcMonths">Месяцев</label>
+                    <input type="text" class="calcAgeInput" id="calcMonths">
+                </div>
+                <button id="calculate">Рассчитать</button>
+            </div>
+            <footer>
+                <div id="calcResult"></div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="/script/main.js" type="module"></script>
