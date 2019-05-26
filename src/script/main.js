@@ -7,6 +7,18 @@ const $randomFactContainers = document.getElementsByClassName('fact');
     $el.innerText = getRandomFact();
 });
 
+const $modalClose = document.getElementsByClassName('modal-close');
+
+[...$modalClose].forEach($el => {
+    $el.addEventListener('click', closeModal);
+});
+
+const $modalOpen = document.getElementsByClassName('modal-open');
+
+[...$modalOpen].forEach($el => {
+    $el.addEventListener('click', openModal);
+});
+
 const $calcAgeInput = document.getElementsByClassName('calcAgeInput');
 const $calcYears = document.getElementById('calcYears');
 const $calcMonths = document.getElementById('calcMonths');
@@ -19,6 +31,20 @@ const $calcResult = document.getElementById('calcResult');
 
 if ($calcButton) {
     $calcButton.addEventListener('click', updateAge);
+}
+
+const $modal = document.getElementById('modal');
+
+function closeModal() {
+    if ($modal) {
+        $modal.classList.remove('modal--show');
+    }
+}
+
+function openModal() {
+    if ($modal) {
+        $modal.classList.add('modal--show');
+    }
 }
 
 function updateAge() {
