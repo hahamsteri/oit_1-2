@@ -7,7 +7,9 @@
     --container-width: calc(var(--base-size) * 150); /* 1200px */
 }
 
-* {
+*, input, select, button {
+    box-sizing: border-box;
+
     padding: 0;
     margin: 0;
 }
@@ -152,10 +154,6 @@ a {
     z-index: -1;
 }
 
-.link.link--contain > img {
-    object-fit: contain;
-}
-
 .link > span {
     display: inline-block;
 
@@ -185,4 +183,39 @@ a {
     flex-wrap: wrap;
 
     justify-content: space-around;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+    margin-bottom: var(--base-size);
+}
+
+.calc-input {
+    margin-right: 1em;
+}
+
+.calc-input > label {
+    display: block;
+
+    margin-bottom: .4rem;
+
+    font-size: .8rem;
+}
+
+.calc-input > input,
+.calc-input > select,
+.form > button {
+    height: calc(var(--base-size) * 4);
+    width: calc(var(--base-size) * 10);
+}
+
+.calc-input > input {
+    padding: 0 1em;
+}
+
+.form > button {
+    border-radius: .3em;
 }
