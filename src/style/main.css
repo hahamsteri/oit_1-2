@@ -123,6 +123,8 @@ a {
     width: calc(var(--base-size) * 25);
     height: calc(var(--base-size) * 25);
 
+    margin-bottom: 2.5em;
+
     border-radius: .3rem;
 
     overflow: hidden;
@@ -133,7 +135,7 @@ a {
 }
 
 .link:hover {
-    box-shadow: 0 3px 11px -8px #0000007a;
+    box-shadow: 0 3px 15px -8px #0000007a;
 }
 
 .link > img {
@@ -176,5 +178,7 @@ a {
     display: flex;
 
     flex-direction: row;
+    flex-wrap: wrap;
+
     justify-content: space-around;
 }
