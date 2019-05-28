@@ -25,13 +25,8 @@ body {
 }
 
 header {
-    margin: 0 auto;
-
     width: var(--container-width);
-}
 
-header > img {
-    display: block;
     margin: 0 auto;
 }
 

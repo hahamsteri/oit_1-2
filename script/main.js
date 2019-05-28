@@ -68,8 +68,7 @@ function updateAge() {
 }
 
 function preventNonNumbers(e) {
-    const char = parseInt(e.key);
-    if (!char && char !== 0) {
+    if (!parseInt(e.key)) {
         e.preventDefault();
 
         return;
