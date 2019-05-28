@@ -24,6 +24,7 @@
     "browser-sync": "2.26.5",
     "gh-pages": "2.0.1",
     "gulp": "4.0.2",
+    "gulp-cheerio": "0.6.3",
     "gulp-cli": "2.2.0",
     "gulp-copy": "4.0.1",
     "gulp-hb": "8.0.0",
