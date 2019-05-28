@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная о котах</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Caption&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/brands.css" integrity="sha384-i2PyM6FMpVnxjRPi0KW/xIS7hkeSznkllv+Hx/MtYDaHA5VcF0yL3KVlvzp8bWjQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/fontawesome.css" integrity="sha384-sri+NftO+0hcisDKgr287Y/1LVnInHJ1l+XC7+FOabmTTIK0HnE2ID+xxvJ21c5J" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <img src="http://placekitten.com/1200/60">
+    </header>
+    <div class="container">
+        <nav class="side">
+            <div>
+                <ul class="menu">
+                    <li>
+                        <a href="index.html">Главная</a>
+                    </li>
+                    <li>
+                        <a href="long">Длинношерстные</a>
+                    </li>
+                    <li>
+                        <a href="short">Короткошерстные</a>
+                    </li>
+                    <li>
+                        <a href="okr.html">Окрасы</a>
+                    </li>
+                    <li>
+                        <a href="reg.html">Фелинологические организации</a>
+                    </li>
+                </ul>
+
+                <div class="actions">
+                    <button class="show-calc modal-open">
+                        Узнать возраст кота
+                    </button>
+                </div>
+
+                <div class="fact"></div>
+            </div>
+            <footer>
+                <span class="copyright">
+                    2019, Татьяна Сипайло
+                </span>
+                <div>
+                    <a href="https://vk.com/hahamsteri" class="footer-link" title="Вконтакте">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="https://instagram.com/hahamsteri" class="footer-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </footer>
+        </nav>
+        <article class="content">
+                <div class="links">
+                    <div class="link">
+                        <img src="assets/arlekin.jpg">
+                        <span>Арлекин</span>
+                    </div>
+                    <div class="link">
+                            <img src="assets/bicolor.jpg">
+                            <span>Биколор</span>
+                     </div>
+                     <div class="link">
+                            <img src="assets/black_mramor.jpg">
+                            <span>Черный мраморный окрас</span>
+                     </div>
+                     <div class="link">
+                            <img src="assets/black_point.jpg">
+                            <span>Черный пятнистый окрас</span>
+                     </div>
+                     <div class="link">
+                            <img src="assets/blue.jpg">
+                            <span>Голубой окрас</span>
+                     </div>
+                     <div class="link">
+                            <img src="assets/cherepachovii.jpg">
+                            <span>Черепаховый окрас</span>
+                     </div>
+                     <div class="link">
+                            <img src="assets/cinnamon.jpg">
+                            <span>Циннамон</span>
+                     </div>
+                     <div class="link">
+                            <img src="assets/dimchatii.jpg">
+                            <span>Дымчатый окрас</span>
+                     </div>
+                     <div class="link">
+                            <img src="assets/gimalaicki.jpg">
+                            <span>Гималайский окрас</span>
+                     </div>
+                     <div class="link">
+                            <img src="assets/red_tebbi.jpg">
+                            <span>Красный тебби</span>
+                     </div>
+                     <div class="link">
+                            <img src="assets/silver_tebbi.jpg">
+                            <span>Серебристый тебби</span>
+                     </div>
+                     <div class="link">
+                            <img src="assets/tikirovannii_foyn.jpg">
+                            <span>Тикированный фоун</span>
+                     </div>
+                     <div class="link">
+                            <img src="assets/van.jpg">
+                            <span>Ван</span>
+                     </div>
+                     <div class="link">
+                            <img src="assets/zatushuvannii_silver.jpg">
+                            <span>Затушеванный серебристый окрас</span>
+                     </div>
+                </div>
+        </article>
+    </div>
+    <div class="modal" id="modal">
+        <div class="calc" id="calc">
+            <header>
+                <button id="calcClose" class="modal-close">
+                    Закрыть
+                </button>
+            </header>
+            <div class="form">
+                <div class="calc-input">
+                    <label for="sex">Пол</label>
+                    <select id="sex">
+                        <option value="m">Мужской</option>
+                        <option value="f">Женский</option>
+                    </select>
+                </div>
+                <div class="calc-input">
+                    <label for="calcYears">Лет</label>
+                    <input type="text" class="calcAgeInput" id="calcYears">
+                </div>
+                <div class="calc-input">
+                    <label for="calcMonths">Месяцев</label>
+                    <input type="text" class="calcAgeInput" id="calcMonths">
+                </div>
+                <button id="calculate">Рассчитать</button>
+            </div>
+            <footer>
+                <div id="calcResult"></div>
+            </footer></div>
+        </div>
+    
+</body>
+<script src="script/main.js" type="module"></script>
+</html>
